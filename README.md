@@ -8,4 +8,4 @@ It is a basic shopping list, uses shared preferences instead of database to stor
 - Delete items
 
 ######Screenshot
-[![screenshot](ic_launcher-web.png)](ic_launcher-web.png)
+[![screenshot](screenshot.png)](screenshot.png)
