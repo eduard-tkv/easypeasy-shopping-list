@@ -1,10 +1,5 @@
 package ca.deltadigital.mysimpleshoppinglist;
 
-//TODO -
-// couldnt make it work: to make the row change color and change icon when clicke on the image
-//indicating that the item has been bought - tried toggle button, other things, didnt work
-// looks like would have to use a custom adapter for the listview
-
 import java.util.ArrayList;
 
 import android.annotation.SuppressLint;
