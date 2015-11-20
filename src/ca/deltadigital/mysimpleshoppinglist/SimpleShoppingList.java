@@ -45,6 +45,7 @@ public class SimpleShoppingList extends ListActivity implements OnClickListener,
     {
         super.onCreate(savedInstanceState);
         
+        // Will be using shared preferences to store items not the database
         SharedPreferences pref = getSharedPreferences(MyPREFERENCES,Context.MODE_PRIVATE);
         
         // Use the lines below to clear all tasks when debugging
@@ -56,8 +57,10 @@ public class SimpleShoppingList extends ListActivity implements OnClickListener,
         
         String retMessage = pref.getString(TASK_KEY, null);
         
+        // If there are previously stored shopping items 
         if (retMessage != null)
         {
+            // Setting activity_list_view as our layout for shopping items
             setContentView(R.layout.activity_list_view);
             
             setTextViewNewItem();
