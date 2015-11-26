@@ -70,15 +70,18 @@ public class SimpleShoppingList extends ListActivity implements OnClickListener,
             char graveAccent = '`';
             ArrayList<String> tasks = new ArrayList<String>();
             ArrayList<Integer> graveAccentPos = new ArrayList<Integer>();
+            
             for (int i = 0; i < lastCharIndex; i++) {
                 if (retMessage.charAt(i) == graveAccent) {
                     graveAccentPos.add(i);
                     count++;
                 }
             }
-
+            
+            // Grave Accent is used as a separator of items in shared preference string
             graveAccentPos.add(lastCharIndex);
 
+            // Adding shopping items into continous tasks string, getting rid of grave accents
             for (int i = 0; i<count; i++)
             {
                 tasks.add(retMessage.substring(graveAccentPos.get(i), graveAccentPos.get(i+1)));
@@ -86,6 +89,7 @@ public class SimpleShoppingList extends ListActivity implements OnClickListener,
             
             String[] retrievedTasks = new String[count];
             
+            // Adding separate tasks into retreievedTasks array
             for (int i=0; i<count; i++)
             {
             	retrievedTasks[i] = tasks.get(i).substring(1);
